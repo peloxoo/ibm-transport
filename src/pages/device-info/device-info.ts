@@ -14,10 +14,7 @@ import { NavController, NavParams } from 'ionic-angular';
 export class DeviceInfoPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DeviceInfoPage');
   }
 
 }
