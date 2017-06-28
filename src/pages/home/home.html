@@ -3,59 +3,10 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Bot Conversation</ion-title>
+    <ion-title>List</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content class="content-chat">
-
-  <ion-grid>
-    <ion-row>
-      <ion-col class="receivedCol">
-        <ion-card class="receivedMsg" float-start>
-          <ion-item>
-            <ion-avatar item-start>
-              <img src="https://www.atomix.com.au/media/2015/06/atomix_user31.png">
-            </ion-avatar>
-            <h2>Hola Buenas Tardes</h2>
-            <p>November 5, 1955</p>
-          </ion-item>
-        </ion-card>
-        <ion-note padding>
-          12:50
-        </ion-note>
-      </ion-col>
-    </ion-row>
-
-
-    <ion-row>
-      <ion-col class="sendCol">
-        <ion-card class="sendMsg" float-end>
-          <ion-item>
-            <ion-avatar item-start>
-              <img src="https://www.atomix.com.au/media/2015/06/atomix_user31.png">
-            </ion-avatar>
-            <h2>Hola Buenas Tardes</h2>
-            <p>November 5, 1955</p>
-          </ion-item>
-        </ion-card>
-        <ion-note float-end padding>
-          12:50
-        </ion-note>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-
-
-
-
-  <div class="text-box">
-    <ion-fab bottom right>
-      <button ion-fab color="hackaton"><ion-icon name="send"></ion-icon></button>
-    </ion-fab>
-    <ion-item padding class="chat-input">
-      <ion-input type="text" placeholder="Enter a text there.."></ion-input>
-    </ion-item>
-  </div>
-
+<ion-content [attr.noScroll]="shouldScroll">
+  <div id="map"></div>
 </ion-content>
