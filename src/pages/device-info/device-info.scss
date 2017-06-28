@@ -1,4 +1,19 @@
 page-device-info {
+
+    .background-image {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/cc/AUVASA_-_INTERIOR_DE_UN_AUTOB%C3%9AS_URBANO_EN_VALLADOLID_-_2013.jpg);
+        @media screen and (orientation:portrait) {
+            background-size: cover;
+            background-position: 50% 80%;
+            height: 25%;
+        }
+
+        @media screen and (orientation:landscape) {
+            background-size: cover;
+            background-position: 50% 65%;
+            height: 50%;
+        }
+    }
     .time {
         font-size: 1.4em;
     }
