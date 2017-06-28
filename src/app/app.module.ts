@@ -13,6 +13,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BotServiceProvider } from '../providers/bot-service/bot-service';
 import { InfoServiceProvider } from '../providers/info-service/info-service';
+import { ElasticHeaderDirective } from '../directives/elastic-header/elastic-header';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { InfoServiceProvider } from '../providers/info-service/info-service';
     ChatPage,
     HomePage,
     DeviceInfoPage,
-    LineInfoPage
+    LineInfoPage,
+    ElasticHeaderDirective
   ],
   imports: [
     HttpModule,
