@@ -17,41 +17,29 @@
 
 <ion-content padding>
 
-  <img src="../assets/img/mapa.gif">
+  <img style="width:70%" src="https://upload.wikimedia.org/wikipedia/commons/c/cc/AUVASA_-_INTERIOR_DE_UN_AUTOB%C3%9AS_URBANO_EN_VALLADOLID_-_2013.jpg">
+  <br>
+  <br>
+  <strong class="time">Tiempo estimado de llegada:</strong>
+  <ion-badge item-end style="background: green">5 min</ion-badge>
 
-  <h2>Información</h2>
+  <h3>Información</h3>
 
-  <ion-list>
-    <ion-item>
-      <img style="width:8%" src="../assets/img/handicap.png">
-      <div class="item-note" item-right>
-        <ion-badge item-end style="background:red">0</ion-badge>
-      </div>
-    </ion-item>
-    <ion-item>
-      <img style="width: 10%" src="../assets/img/baby.png">
-      <div class="item-note" item-right>
-        <ion-badge item-end>0</ion-badge>
-      </div>
-    </ion-item>
-    <ion-item>
-      <img style="width: 10%" src="../assets/img/people.png">
-      <div class="item-note" item-right>
-        <ion-badge item-end>0</ion-badge>
-      </div>
-    </ion-item>
-    <ion-item>
-      <img style="width: 10%" src="../assets/img/temperature.png">
-      <div class="item-note" item-right>
-        <ion-badge item-end>0</ion-badge>
-      </div>
-    </ion-item>
-    <ion-item>
-      <img style="width: 10%" src="../assets/img/water.jpg">
-      <div class="item-note" item-right>
-        <ion-badge item-end>0</ion-badge>
-      </div>
-    </ion-item>
-  </ion-list>
+  <ion-grid>
+    <ion-row justify-content-center>
+      <ion-col col-2><img src="../assets/img/handicap.png"></ion-col>
+      <ion-col col-2><img src="../assets/img/baby.png"></ion-col>
+      <ion-col col-2><img src="../assets/img/people.png"></ion-col>
+      <ion-col col-2><img src="../assets/img/temperature.png"></ion-col>
+      <ion-col col-2><img src="../assets/img/water.jpg"></ion-col>
+    </ion-row>
+    <ion-row justify-content-center>
+      <ion-col col-2><ion-badge item-end style="background:red">0</ion-badge></ion-col>
+      <ion-col col-2><ion-badge item-end>0</ion-badge></ion-col>
+      <ion-col col-2><ion-badge item-end>0</ion-badge></ion-col>
+      <ion-col col-2><ion-badge item-end>0</ion-badge></ion-col>
+      <ion-col col-2><ion-badge item-end>0</ion-badge></ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>
