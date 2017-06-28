@@ -12,6 +12,7 @@ import { LineInfoPage } from '../pages/line-info/line-info';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BotServiceProvider } from '../providers/bot-service/bot-service';
+import { ElasticHeaderDirective } from '../directives/elastic-header/elastic-header';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { BotServiceProvider } from '../providers/bot-service/bot-service';
     ChatPage,
     HomePage,
     DeviceInfoPage,
-    LineInfoPage
+    LineInfoPage,
+    ElasticHeaderDirective
   ],
   imports: [
     HttpModule,

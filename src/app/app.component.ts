@@ -16,17 +16,17 @@ export class MyApp {
 
   rootPage: any = ChatPage;
 
-  pages: Array<{ title: string, component: any }>;
+  pages: Array<{ title: string, component: any, icon: any }>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Chat', component: ChatPage },
-      { title: 'Info Line', component: LineInfoPage },
-      { title: 'Info Device', component: DeviceInfoPage }
+      { title: 'Home', component: HomePage, icon: 'map' },
+      { title: 'Chat', component: ChatPage, icon: 'chatboxes' },
+      { title: 'Info Parada', component: LineInfoPage, icon: 'information-circle' },
+      { title: 'Info Linea', component: DeviceInfoPage, icon: 'information' }
     ];
 
   }

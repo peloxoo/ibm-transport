@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/toPromise';
 
 
 export interface Context {
@@ -8,8 +9,18 @@ export interface Context {
     {
       numero_parada: string;
       nombre_parada: string;
+      lineas_disponibles?: string[],
+      tiempo_espera?: string
     }
   ]
+}
+
+export interface Response {
+  input:
+  {
+    text: string;
+  }
+
 }
 /*
   Generated class for the BotServiceProvider provider.
@@ -20,24 +31,45 @@ export interface Context {
 @Injectable()
 export class BotServiceProvider {
 
-  context: Context = {
+  contextInit: Context = {
     context: [
-      { numero_parada: '2369', nombre_parada: 'Martínez Izquierdo' }
+      {
+        numero_parada: '2369',
+        nombre_parada: 'Martínez Izquierdo'
+      }
     ]
   };
+
+  response: any;
+  context: any;
 
   constructor(public http: Http) {
     console.log('Hello BotServiceProvider Provider');
   }
 
-  sendData() {
-    this.http.post('https://node-e3.mybluemix.net/conversacion', JSON.stringify(this.context))
-      .map(res => res.json())
-      .subscribe(res => {
-        alert("success " + res);
-      }, (err) => {
-        alert("failed:" + err);
+  // sendData() {
+  //   this.http.post('https://equipo3-conversation.mybluemix.net/conversacion', JSON.stringify(this.contextInit))
+  //     .map(res => res.json())
+  //     .subscribe(res => {
+  //       alert("success " + res);
+  //       this.response = res.output.text[0];
+  //       this.context = res.context;
+  //     }, (err) => {
+  //       alert("failed:" + err);
+  //     });
+  // }
+
+  sendData(): Promise<any> {
+    return this.http.post('https://equipo3-conversation.mybluemix.net/conversacion', JSON.stringify(this.contextInit))
+      .toPromise()
+      .then(response => response.json())
+      .catch(error => {
+        console.error(error);
+        alert("error");
       });
   }
+
+
+
 
 }
