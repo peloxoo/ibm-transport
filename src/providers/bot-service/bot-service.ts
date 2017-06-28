@@ -11,6 +11,7 @@ export interface Context {
     }
   ]
 }
+
 /*
   Generated class for the BotServiceProvider provider.
 

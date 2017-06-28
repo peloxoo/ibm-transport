@@ -20,7 +20,7 @@
 
   <h2 text-center>Líneas</h2>
   <ion-list>
-    <ion-item>
+    <ion-item (click)="takeLine(L1)">
       <div class="item-left" item-left>
         <ion-badge item-start>1</ion-badge>
       </div>
@@ -32,9 +32,9 @@
         <ion-icon name="arrow-round-forward"></ion-icon>
       </div>
     </ion-item>
-    <ion-item>
+    <ion-item (click)="takeLine(L2)">
       <div class="item-left" item-left>
-        <ion-badge item-end>45</ion-badge>
+        <ion-badge item-end>2</ion-badge>
       </div>
       <div item-center style="margin-left:20%">
         Origen-Destino

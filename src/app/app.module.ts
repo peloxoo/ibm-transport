@@ -12,6 +12,7 @@ import { LineInfoPage } from '../pages/line-info/line-info';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BotServiceProvider } from '../providers/bot-service/bot-service';
+import { InfoServiceProvider } from '../providers/info-service/info-service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { BotServiceProvider } from '../providers/bot-service/bot-service';
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    BotServiceProvider
+    BotServiceProvider,
+    InfoServiceProvider
   ]
 })
 export class AppModule { }
