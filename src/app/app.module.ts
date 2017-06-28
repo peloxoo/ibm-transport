@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
@@ -10,6 +11,7 @@ import { LineInfoPage } from '../pages/line-info/line-info';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { BotServiceProvider } from '../providers/bot-service/bot-service';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LineInfoPage
   ],
   imports: [
+    HttpModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
   ],
@@ -34,7 +37,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    BotServiceProvider
   ]
 })
-export class AppModule {}
+export class AppModule { }

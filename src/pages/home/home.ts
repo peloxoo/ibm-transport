@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+
+import { BotServiceProvider } from '../../providers/bot-service/bot-service';
+
 import * as Leaflet from 'leaflet';
 
 @Component({
@@ -9,8 +12,12 @@ import * as Leaflet from 'leaflet';
 })
 export class HomePage implements OnInit {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public botService: BotServiceProvider) {
 
+  }
+
+  send() {
+    this.botService.sendData();
   }
 
   ngOnInit(): void {
