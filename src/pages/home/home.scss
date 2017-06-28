@@ -1,42 +1,10 @@
 page-home {
+  [noScroll] {
+    overflow: hidden;
+  }
 
-    .content-chat{
-        background: color($colors, hackaton-alpha);
-
-        .receivedCol {
-            .receivedMsg {
-                border-radius: 23px;
-                border-left: 10px solid color($colors, secondary);
-            }
-            ion-note {
-                color: color($colors, light);
-            }
-        }
-
-
-        .sendCol {
-            .sendMsg {
-                border-radius: 23px;
-                border-right: 10px solid color($colors, hackaton);
-            }
-            ion-note {
-                color: color($colors, light);
-            }
-        }
-
-        .text-box {
-            .chat-input {
-                position: fixed;
-                top: 85%;
-            }
-            .chat-input {
-                border-top: 2px solid color($colors, hackaton);
-            }
-            ion-fab {
-                bottom: 12%;
-            }
-        }
-    }
-
-
+  #map {
+    height: 100%;
+    width: 100%;
+  }
 }
