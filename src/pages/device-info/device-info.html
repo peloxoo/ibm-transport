@@ -15,15 +15,26 @@
 
 </ion-header>
 
-<ion-content padding>
+<ion-content elastic-header>
 
-  <img style="width:70%" src="https://upload.wikimedia.org/wikipedia/commons/c/cc/AUVASA_-_INTERIOR_DE_UN_AUTOB%C3%9AS_URBANO_EN_VALLADOLID_-_2013.jpg">
-  <br>
-  <br>
-  <strong class="time">Tiempo estimado de llegada:</strong>
-  <ion-badge item-end style="background: green">5 min</ion-badge>
 
-  <h3>Información</h3>
+  <!-- Elastic-header main image -->
+  <div class="background-image"></div>
+
+  <br>
+
+  <ion-card float-end>
+    <ion-item>
+      <h2>Tiempo estimado de llegada:</h2>
+      <ion-badge item-end style="background: green">5 min</ion-badge>
+    </ion-item>
+  </ion-card>
+
+
+  <ion-item>
+    <ion-icon item-start name="information"></ion-icon>
+    <h2>Información:</h2>
+  </ion-item>
 
   <ion-grid>
     <ion-row justify-content-center>
@@ -34,11 +45,21 @@
       <ion-col col-2><img src="https://www.shareicon.net/download/2015/12/09/684673_shape_512x512.png"></ion-col>
     </ion-row>
     <ion-row justify-content-center style="margin-left: 4%">
-      <ion-col col-2><ion-badge item-end style="background:red">0</ion-badge></ion-col>
-      <ion-col col-2><ion-badge item-end>0</ion-badge></ion-col>
-      <ion-col col-2><ion-badge item-end>0</ion-badge></ion-col>
-      <ion-col col-2><ion-badge item-end>0</ion-badge></ion-col>
-      <ion-col col-2><ion-badge item-end>0</ion-badge></ion-col>
+      <ion-col col-2>
+        <ion-badge item-end style="background:red">0</ion-badge>
+      </ion-col>
+      <ion-col col-2>
+        <ion-badge item-end>0</ion-badge>
+      </ion-col>
+      <ion-col col-2>
+        <ion-badge item-end>0</ion-badge>
+      </ion-col>
+      <ion-col col-2>
+        <ion-badge item-end>0</ion-badge>
+      </ion-col>
+      <ion-col col-2>
+        <ion-badge item-end>0</ion-badge>
+      </ion-col>
     </ion-row>
   </ion-grid>
 
